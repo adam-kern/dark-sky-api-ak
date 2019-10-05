@@ -1,0 +1,35 @@
+<div id="jerusalem">
+    <br>
+<h1>What is the weather right now in Jerusalem?</h1>
+
+<br>
+<br>
+
+<mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>Jerusalem, Israel</mat-card-title>
+      <mat-card-subtitle>Forecast</mat-card-subtitle>
+    </mat-card-header>
+    <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
+    <mat-card-content>
+      <h4>Condition: {{currWeather?.summary}}</h4>
+      <h4>Temperature: {{currWeather?.temperature}}°F </h4>
+      <h4>Chance of Rain: {{currWeather?.precipProbability}}%</h4>
+      <h4>Wind Speed: {{currWeather?.windSpeed}}mph</h4>
+    </mat-card-content>
+    <mat-card-actions>
+        <a href="https://ctt.ac/WQI2w" target="_blank">
+      <button mat-button>SHARE</button>
+      </a>
+    </mat-card-actions>
+  </mat-card>
+
+</div>
+<p>Enter the name of a different city to reveal the current forecast. (BETA)</p>
+<div id="weatherForm">
+<mat-form-field>
+    <input matInput placeholder="City" [(ngModel)]='city'>
+</mat-form-field>
+<button mat-raised-button (click)='getForecast()'>Lookup Forecast</button>
+</div>
+
